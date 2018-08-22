@@ -161,7 +161,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 1.9135656
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -199,6 +199,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1270381302}
   - component: {fileID: 1270381301}
+  - component: {fileID: 1270381303}
+  - component: {fileID: 1270381304}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -259,9 +261,36 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1270381300}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.13031895, y: -0.6833332, z: 0.082789905}
+  m_LocalPosition: {x: 0.03, y: -0.07, z: 0.082789905}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1270381303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270381300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad001ddd1ce7be44a58f22f4d47e595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyUp: 119
+  keyDown: 115
+  keyLeft: 97
+  keyRight: 100
+--- !u!114 &1270381304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1270381300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0731957d69cac2547833052ab9cb9926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5

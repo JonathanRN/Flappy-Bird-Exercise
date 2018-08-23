@@ -13,12 +13,18 @@ public class TimedSpawner : MonoBehaviour {
 		StartCoroutine(SpawnPipeCoroutine());
 	}
 
+	private void OnDisable()
+	{
+		StopAllCoroutines();
+	}
+
 	private IEnumerator SpawnPipeCoroutine()
 	{
 		while (true)
 		{
 			yield return new WaitForSeconds(spawnPipeDelay);
 			SpawnPrefab();
+			Debug.Log("Spawn by" + gameObject.GetInstanceID());
 		}
 	}
 

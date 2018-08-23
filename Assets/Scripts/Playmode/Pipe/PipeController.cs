@@ -18,7 +18,7 @@ public class PipeController : MonoBehaviour {
 	private void Awake()
 	{
 		birdSensor = transform.root.GetComponentInChildren<BirdSensor>();
-		pipePassedEventChannel = GameObject.FindWithTag("GameController").GetComponent<PipePassedEventChannel>();
+		pipePassedEventChannel = GameObject.FindWithTag(Tags.GameController).GetComponent<PipePassedEventChannel>();
 
 		RandomizePipeHeights();
 		RandomizePipeDistances();
